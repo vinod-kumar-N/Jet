@@ -298,7 +298,7 @@
                                 <input name="number" class="form-control" type="text" placeholder="+91">
                             </div>
                             <div class="col-md-6 col-sm-6 padding-left-none">
-                                <input name="number" class="form-control numberInput" type="number" data-validation="length numeric" data-validation-length="10"  data-validation-format="^[789]\d{9}$" data-validation-error-msg="Required Field">
+                                <input name="number" class="form-control numberInput" type="number" onChange="test()" data-validation="length numeric" data-validation-length="10"  data-validation-format="^[789]\d{9}$" data-validation-error-msg="Required Field">
                             </div>
 
 
@@ -307,28 +307,19 @@
                                 <span class="required" aria-required="true">* </span>
                             </label>
                             <div class="col-md-7  col-sm-7  margin-top-15">
-                                <select class="form-control operatorInput" name="select">
+                                <select class="form-control operatorInput" name="select" onChange="test()">
                                     <option value="">Select</option>
                                     <option value="Category 1">Airtel</option>
                                     <option value="Category 2">BSNL</option>
                                     <option value="Category 3">Vodafone</option>
                                 </select>
                             </div>
-
-
-                            <div class="col-md-1 margin-top-20 padding-left-none left-none">
-
-                                <a href="#" data-toggle="modal" data-target="#myModal6">Change..</a>
-
-                            </div>
-
-
                             <label class="control-label col-md-4 col-sm-4 margin-top-15">
                                 Select Circle
                                 <span class="required" aria-required="true">* </span>
                             </label>
                             <div class="col-md-7  col-sm-7  margin-top-15">
-                                <select class="form-control circleInput" name="select">
+                                <select class="form-control circleInput" name="select" onChange="test()">
                                     <option value="">Select</option>
                                     <option value="Category 1">Karnataka</option>
                                     <option value="Category 2">Assam</option>
@@ -344,11 +335,6 @@
                                     <option value="Category 12">Tamil Nadu</option>
                                     <option value="Category 13">Uttar Pradesh</option>
                                 </select>
-
-                            </div>
-                            <div class="col-md-1 margin-top-20 padding-left-none left-none">
-
-                                <a href="#" data-toggle="modal" data-target="#ajay">Change..</a>
 
                             </div>
                         </div>

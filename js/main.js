@@ -1,4 +1,5 @@
 var callTab;
+var test;
 $(document).ready(function () {
   /*  new WOW().init();
     $('.md-trigger').on('click', function () {
@@ -50,16 +51,22 @@ $(document).on('click','.btnTab',function(){
  $.validate({
     lang: 'es'
   });
-
-  
- setInterval(function(){
-     var c = $('.circleInput').val();
-     var o = $('.operatorInput').val();
-     var n = $('.numberInput'); 
-     if( c == '' || o == '' || n.val() =='' || (n.hasClass('error')) ){
+    
+  function callDetails(getSelect,plan){
+      this.getSelect = getSelect;
+      this.plan = plan;
+  }
+  test = function(){
+    var c = $('.circleInput');
+     var o = $('.operatorInput');
+     var n = $('.numberInput');
+     if( c.val() == '' || o.val() == '' || n.val() =='' || (n.hasClass('error')) ){
         $('.postpaidBox').addClass('active');
      } else {
           $('.postpaidBox').removeClass('active');
      }
- })
+  }
+  callDetails.prototype.getDetails = function(){
+      $('.prepaidBox').html(this.getSelect +' | '+ this.plan );
+  }
 });
