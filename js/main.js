@@ -47,6 +47,17 @@ $(document).ready(function () {
 $(document).on('click','.btnTab',function(){
   $('.btnTab').removeClass('active');
   $(this).addClass('active');
+  if($(this).val()== 'mobile'){
+      $('.commonHBox').fadeOut();
+    $('.prepaidBox').fadeIn();
+  } else if($(this).val()== 'dc'){
+      
+  }else if($(this).val()== 'dth'){
+    $('.commonHBox').fadeOut();
+    $('.DTHBox').fadeIn();
+  }else if($(this).val()== 'Landline'){
+
+  }
 });
  $.validate({
     lang: 'es'

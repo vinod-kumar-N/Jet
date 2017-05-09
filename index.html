@@ -206,25 +206,25 @@
 
                                     <div class="col-md-12">
 
-                                          <button type="button" class="btn green btn-outline btn-block btn-lg btnTab active">Mobile <i class="fa fa-mobile margin-left-10" aria-hidden="true"></i></button>
+                                          <button type="button" value="mobile" class="btn green btn-outline btn-block btn-lg btnTab active">Mobile <i class="fa fa-mobile margin-left-10" aria-hidden="true"></i></button>
 
                                     </div>
 
                                     <div class="col-md-12 top-space-25">
 
-                                        <button type="button" class="btn green btn-outline btn-block btn-lg btnTab" >Data Card <i class="fa fa-wifi margin-left-10" aria-hidden="true"></i></button>
+                                        <button type="button" value="dc" class="btn green btn-outline btn-block btn-lg btnTab" >Data Card <i class="fa fa-wifi margin-left-10" aria-hidden="true"></i></button>
 
                                     </div>
 
                                     <div class="col-md-12 top-space-25">
 
-                                        <button type="button" class="btn green btn-outline btn-block btn-lg btnTab">D T H <i class="fa fa-television margin-left-10" aria-hidden="true"></i></button>
+                                        <button type="button" value="dth" class="btn green btn-outline btn-block btn-lg btnTab">D T H <i class="fa fa-television margin-left-10" aria-hidden="true"></i></button>
 
                                     </div>
 
                                     <div class="col-md-12 top-space-25">
 
-                                        <button type="button" class="btn green btn-outline btn-block btn-lg btnTab">Landline <i class="fa fa-phone margin-left-10" aria-hidden="true"></i></button>
+                                        <button type="button" value="Landline" class="btn green btn-outline btn-block btn-lg btnTab">Landline <i class="fa fa-phone margin-left-10" aria-hidden="true"></i></button>
 
                                     </div>
 
@@ -277,15 +277,18 @@
                 <form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate" >
 
                     <div class="form-body">
-                        <div class="col-md-6 overlay prepaidBox">
-
+                        <div class="col-md-6">
+                            <div class="commonHeadingDetails">
                             <div class="col-md-12 details">Mobile | Postpaid</div>
-
-                            <div class="form-group">
-
-                                <label class="header card1" style="color: rgb(255, 255, 255); margin-bottom: 20px;">
+                            <label class="header card1" style="color: rgb(255, 255, 255); margin-bottom: 20px;">
                                     <h4>Select Oprater </h4>
                                 </label>
+                            </div>
+                            
+                                <div class="overlay prepaidBox commonHBox">
+                            <div class="form-group">
+
+                                
 
                             </div>
 
@@ -338,7 +341,23 @@
 
                             </div>
                         </div>
-
+                         <div class="DTHBox commonHBox">
+                            <div class="col-md-7  col-sm-7  margin-top-15">
+                                <select class="form-control" name="select" onChange="test()">
+                                    <option value="">DTH Operator</option>
+                                    <option value="Airtel">Airtel Digital TV</option>
+                                    <option value="Dish">Dish TV</option>
+                                    <option value="Reliance">Reliance Digital TV</option>
+                                    <option value="Sun">Sun Direct</option>
+                                    <option value="Tata">Tata Sky</option>
+                                    <option value="Videocon">Videocon D2H</option>
+                                </select>
+                            <input type="text" class="" placeholder="Enter Cutomer Id"/>
+                            </div>
+                        </div>
+                        </div>
+                        
+                       
                         <div class="col-md-5 col-md-push-1 overlay postpaidBox active">
 
                             <div class="col-md-12 details">Mobile | Postpaid | Airtel | Karnataka..</div>
