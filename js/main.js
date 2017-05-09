@@ -55,8 +55,8 @@ $(document).on('click','.btnTab',function(){
  setInterval(function(){
      var c = $('.circleInput').val();
      var o = $('.operatorInput').val();
-     var n = $('.numberInput').val(); 
-     if( c == '' || o == '' || n ==''){
+     var n = $('.numberInput'); 
+     if( c == '' || o == '' || n.val() =='' || (n.hasClass('error')) ){
         $('.postpaidBox').addClass('active');
      } else {
           $('.postpaidBox').removeClass('active');
