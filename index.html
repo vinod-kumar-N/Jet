@@ -14,6 +14,7 @@
     <link href="css/components.min.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="js/jquery.niftymodals.css" />
     <script src="js/jquery.niftymodals.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
   <!--  <script  src="js/easyResponsiveTabs.js"></script> -->
 </head>
 
@@ -297,7 +298,7 @@
                                 <input name="number" class="form-control" type="text" placeholder="+91">
                             </div>
                             <div class="col-md-6 col-sm-6 padding-left-none">
-                                <input name="number" class="form-control" type="text">
+                                <input name="number" class="form-control numberInput" type="number" data-validation="length numeric" data-validation-length="10"  data-validation-format="^[789]\d{9}$" data-validation-error-msg="Required Field">
                             </div>
 
 
@@ -306,8 +307,8 @@
                                 <span class="required" aria-required="true">* </span>
                             </label>
                             <div class="col-md-7  col-sm-7  margin-top-15">
-                                <select class="form-control" name="select">
-                                    <option value="">Select...</option>
+                                <select class="form-control operatorInput" name="select">
+                                    <option value="">Select</option>
                                     <option value="Category 1">Airtel</option>
                                     <option value="Category 2">BSNL</option>
                                     <option value="Category 3">Vodafone</option>
@@ -323,12 +324,12 @@
 
 
                             <label class="control-label col-md-4 col-sm-4 margin-top-15">
-                                Select Circal
+                                Select Circle
                                 <span class="required" aria-required="true">* </span>
                             </label>
                             <div class="col-md-7  col-sm-7  margin-top-15">
-                                <select class="form-control" name="select">
-                                    <option value="">Select...</option>
+                                <select class="form-control circleInput" name="select">
+                                    <option value="">Select</option>
                                     <option value="Category 1">Karnataka</option>
                                     <option value="Category 2">Assam</option>
                                     <option value="Category 3">Bihar</option>
@@ -1935,7 +1936,7 @@
             <div class="mobile-grids">
 
                 <div class="more-service-bottom">
-                    <h4 class="text-center margin-bottom-25">Select Circal</h4>
+                    <h4 class="text-center margin-bottom-25">Select Circle</h4>
 
                     <div class="col-md-4">
 

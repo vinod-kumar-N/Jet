@@ -47,15 +47,19 @@ $(document).on('click','.btnTab',function(){
   $('.btnTab').removeClass('active');
   $(this).addClass('active');
 });
+ $.validate({
+    lang: 'es'
+  });
 
-$('.commonRadioBtn').on('click', function(e){
-  if($(this).hasClass('prepaid')){
-    $('.postpaidBox').addClass('active');
-    $('.prepaidBox').removeClass('active');
-  } else {
-    $('.postpaidBox').removeClass('active');
-    $('.prepaidBox').addClass('active');
-  }
-  e.stopPropagation();
-})
+  
+ setInterval(function(){
+     var c = $('.circleInput').val();
+     var o = $('.operatorInput').val();
+     var n = $('.numberInput').val(); 
+     if( c == '' || o == '' || n ==''){
+        $('.postpaidBox').addClass('active');
+     } else {
+          $('.postpaidBox').removeClass('active');
+     }
+ })
 });

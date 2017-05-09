@@ -472,3 +472,8 @@ input.card_logo[type="text"] {
 .overlay.active * {
     opacity: 0.5;
 }
+.form-control.error + span{
+    font-size: 10px;
+    margin: 0;
+    text-align: right;
+}
