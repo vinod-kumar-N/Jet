@@ -44,19 +44,24 @@ $(document).ready(function () {
 
     // For tabs menu
 /* Reuseable code Starts*/
-    var dthBox = function(){
+    var commonIncomeBox = function(getName){
+        var getName;
         var array =[];
-        array.push($('.dthOpSelect'));
-        array.push($('.dthCustId'));
+        $('.'+getName).find('.commonpushItem').each(function(index){
+            array.push($(this))
+        })
         return array;
     }
-    var mobileBox = function(){
-        var array =[];
-        array.push($('.numberInput'));
-        array.push($('.operatorInput'));
-        array.push($('.circleInput'));
-        return array;
-    }
+    var callDynTab = function(a){
+    $.each(a, function(i){
+            if(a[i].val() == "" ){
+            $('.paidBox').addClass('active');
+            return false;
+        } else{ 
+            $('.paidBox').removeClass('active');
+        }
+        })
+  } 
 /* Reuseable code Ends*/
 $(document).on('click','.btnTab',function(){
   $('.btnTab').removeClass('active');
@@ -88,24 +93,11 @@ $(document).on('click','.btnTab',function(){
     test = function(){
         var btnTabActive = $('.btnTab.active').val();
     if(btnTabActive == 'mobile'){
-        var mobile  = mobileBox();
+        var mobile  = commonIncomeBox('prepaidBox');
         callDynTab(mobile);
     } else if(btnTabActive == 'dth'){
-        var dth = dthBox();
+        var dth = commonIncomeBox('DTHBox');
         callDynTab(dth);
     }
   }
- 
-  function callDynTab(a){
-    $.each(a, function(i){
-            if(a[i].val() == "" ){
-            $('.paidBox').addClass('active');
-            return false;
-        } else{ 
-            $('.paidBox').removeClass('active');
-        }
-        })
-  }
-
- 
 });
