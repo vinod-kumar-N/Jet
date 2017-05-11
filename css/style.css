@@ -69,6 +69,6 @@ a:hover {
 select::-ms-expand {
   display: none;
 }
-.DTHBox{
+.DTHBox, .landline{
 	display: none;
 }

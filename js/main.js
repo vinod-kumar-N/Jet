@@ -47,13 +47,14 @@ $(document).ready(function () {
     var commonIncomeBox = function(getName){
         var getName;
         var array =[];
+        var arrayData = [];
         $('.'+getName).find('.commonpushItem').each(function(index){
             array.push($(this))
         })
         return array;
     }
     var callDynTab = function(a){
-    $.each(a, function(i){
+        $.each(a, function(i){
             if(a[i].val() == "" ){
             $('.paidBox').addClass('active');
             return false;
@@ -71,22 +72,30 @@ $(document).on('click','.btnTab',function(){
       $('.commonHBox').fadeOut();
     $('.prepaidBox').fadeIn();
     $('.sec1').html('Mobile');
+    var mobile  = commonIncomeBox('prepaidBox');
+    callDynTab(mobile);
   } else if($(this).val()== 'dc'){
        $('.sec1').html('Data Card');
        $('.commonHBox').fadeOut();
     $('.prepaidBox').fadeIn();
+     var mobile  = commonIncomeBox('prepaidBox');
+    callDynTab(mobile);
   }else if($(this).val()== 'dth'){
     $('.sec1').html('DTH');
     $('.commonHBox').fadeOut();
     $('.DTHBox').fadeIn();
-
+    var dth = commonIncomeBox('DTHBox');
+        callDynTab(dth);
   }else if($(this).val()== 'Landline'){
-     $('.sec1').html('Landline'); 
+     $('.sec1').html('Landline');
+     var dth = commonIncomeBox('landline');
+        callDynTab(dth);
+        $('.commonHBox').fadeOut();
+    $('.landline').fadeIn();
   }
 });
    $('.commonRadioBtn').on('click', function(){
-          $('.sec2').html($(this).parent().find('label').text().trim());
-        
+          $('.sec2').html($(this).parent().find('label').text().trim());  
     })
  $.validate({
     lang: 'es'
@@ -99,6 +108,9 @@ $(document).on('click','.btnTab',function(){
         callDynTab(mobile);
     } else if(btnTabActive == 'dth'){
         var dth = commonIncomeBox('DTHBox');
+        callDynTab(dth);
+    }else if(btnTabActive == 'Landline'){
+         var dth = commonIncomeBox('landline');
         callDynTab(dth);
     }
   }
