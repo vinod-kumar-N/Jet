@@ -189,7 +189,7 @@
 
             <div class="col-md-3">
 
-                <div class="col-md-12 details">Mobile | Postpaid</div>
+                <div class="col-md-12 details text-left"><span class="sec1">Mobile</span> | <span class="sec2">PrePaid</span></div>
 
                 <div class="underline-home"></div>
 
@@ -273,42 +273,26 @@
             </div>
 
             <div class="col-md-9">
-
                 <form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate" >
 
                     <div class="form-body">
                         <div class="col-md-6">
                             <div class="commonHeadingDetails">
-                            <div class="col-md-12 details">Mobile | Postpaid</div>
+                            
                             <label class="header card1" style="color: rgb(255, 255, 255); margin-bottom: 20px;">
                                     <h4>Select Oprater </h4>
                                 </label>
                             </div>
                             
                                 <div class="overlay prepaidBox commonHBox">
-                            <div class="form-group">
-
-                                
-
-                            </div>
-
-                            <label class="control-label col-md-4  col-sm-4">
-                                Mobile Number
-                                <span class="required" aria-required="true">*</span>
-                            </label>
 
                             <div class="col-md-2 col-sm-2">
-                                <input name="number" class="form-control" type="text" placeholder="+91">
+                                <input name="number" class="form-control" type="text" value="+91" placeholder="+91">
                             </div>
                             <div class="col-md-6 col-sm-6 padding-left-none">
-                                <input name="number" class="form-control numberInput" type="number" onChange="test()" data-validation="length numeric" data-validation-length="10"  data-validation-format="^[789]\d{9}$" data-validation-error-msg="Required Field">
+                                <input name="number" class="form-control numberInput" type="number" onChange="test()" placeholder="Enter Mobile Number" data-validation="length numeric" data-validation-length="10"  data-validation-format="^[789]\d{9}$" data-validation-error-msg="Required Field">
                             </div>
 
-
-                            <label class="control-label col-md-4 col-sm-4 margin-top-15">
-                                Select Operator
-                                <span class="required" aria-required="true">* </span>
-                            </label>
                             <div class="col-md-7  col-sm-7  margin-top-15">
                                 <select class="form-control operatorInput" name="select" onChange="test()">
                                     <option value="">Select</option>
@@ -317,10 +301,6 @@
                                     <option value="Category 3">Vodafone</option>
                                 </select>
                             </div>
-                            <label class="control-label col-md-4 col-sm-4 margin-top-15">
-                                Select Circle
-                                <span class="required" aria-required="true">* </span>
-                            </label>
                             <div class="col-md-7  col-sm-7  margin-top-15">
                                 <select class="form-control circleInput" name="select" onChange="test()">
                                     <option value="">Select</option>
@@ -342,8 +322,8 @@
                             </div>
                         </div>
                          <div class="DTHBox commonHBox">
-                            <div class="col-md-7  col-sm-7  margin-top-15">
-                                <select class="form-control" name="select" onChange="test()">
+                            <div class="col-md-7 col-sm-7 margin-top-15">
+                                <select class="form-control dthOpSelect" name="select" onChange="test()">
                                     <option value="">DTH Operator</option>
                                     <option value="Airtel">Airtel Digital TV</option>
                                     <option value="Dish">Dish TV</option>
@@ -352,20 +332,21 @@
                                     <option value="Tata">Tata Sky</option>
                                     <option value="Videocon">Videocon D2H</option>
                                 </select>
-                            <input type="text" class="" placeholder="Enter Cutomer Id"/>
+                               
                             </div>
+                             <div class="col-md-7  col-sm-7  margin-top-15">
+                                <input type="text" class="dthCustId form-control" placeholder="Enter Cutomer Id"/ onChange="test()">
+                                </div>
                         </div>
                         </div>
                         
                        
-                        <div class="col-md-5 col-md-push-1 overlay postpaidBox active">
-
-                            <div class="col-md-12 details">Mobile | Postpaid | Airtel | Karnataka..</div>
+                        <div class="col-md-5 col-md-push-1 overlay paidBox active">
 
                             <div class="form-group">
 
                                 <label class="header card1" style="color: rgb(255, 255, 255); margin-bottom: 20px;">
-                                    <h4>Select Oprater </h4>
+                                    <h4>Amount</h4>
                                 </label>
 
                             </div>

@@ -69,3 +69,6 @@ a:hover {
 select::-ms-expand {
   display: none;
 }
+.DTHBox{
+	display: none;
+}

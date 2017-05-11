@@ -43,41 +43,69 @@ $(document).ready(function () {
     } */
 
     // For tabs menu
-
+/* Reuseable code Starts*/
+    var dthBox = function(){
+        var array =[];
+        array.push($('.dthOpSelect'));
+        array.push($('.dthCustId'));
+        return array;
+    }
+    var mobileBox = function(){
+        var array =[];
+        array.push($('.numberInput'));
+        array.push($('.operatorInput'));
+        array.push($('.circleInput'));
+        return array;
+    }
+/* Reuseable code Ends*/
 $(document).on('click','.btnTab',function(){
   $('.btnTab').removeClass('active');
+  var selectedTab = $('.btnTab.active').val();
   $(this).addClass('active');
   if($(this).val()== 'mobile'){
       $('.commonHBox').fadeOut();
     $('.prepaidBox').fadeIn();
+    $('.sec1').html('Mobile');
   } else if($(this).val()== 'dc'){
-      
+       $('.sec1').html('Data Card');
   }else if($(this).val()== 'dth'){
+    $('.sec1').html('DTH');
     $('.commonHBox').fadeOut();
     $('.DTHBox').fadeIn();
-  }else if($(this).val()== 'Landline'){
 
+  }else if($(this).val()== 'Landline'){
+     $('.sec1').html('Landline'); 
   }
 });
+   $('.commonRadioBtn').on('click', function(){
+          $('.sec2').html($(this).parent().find('label').text().trim());
+        
+    })
  $.validate({
     lang: 'es'
   });
     
-  function callDetails(getSelect,plan){
-      this.getSelect = getSelect;
-      this.plan = plan;
+    test = function(){
+        var btnTabActive = $('.btnTab.active').val();
+    if(btnTabActive == 'mobile'){
+        var mobile  = mobileBox();
+        callDynTab(mobile);
+    } else if(btnTabActive == 'dth'){
+        var dth = dthBox();
+        callDynTab(dth);
+    }
   }
-  test = function(){
-    var c = $('.circleInput');
-     var o = $('.operatorInput');
-     var n = $('.numberInput');
-     if( c.val() == '' || o.val() == '' || n.val() =='' || (n.hasClass('error')) ){
-        $('.postpaidBox').addClass('active');
-     } else {
-          $('.postpaidBox').removeClass('active');
-     }
+ 
+  function callDynTab(a){
+    $.each(a, function(i){
+            if(a[i].val() == "" ){
+            $('.paidBox').addClass('active');
+            return false;
+        } else{ 
+            $('.paidBox').removeClass('active');
+        }
+        })
   }
-  callDetails.prototype.getDetails = function(){
-      $('.prepaidBox').html(this.getSelect +' | '+ this.plan );
-  }
+
+ 
 });
