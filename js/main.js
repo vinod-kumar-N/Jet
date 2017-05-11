@@ -73,6 +73,8 @@ $(document).on('click','.btnTab',function(){
     $('.sec1').html('Mobile');
   } else if($(this).val()== 'dc'){
        $('.sec1').html('Data Card');
+       $('.commonHBox').fadeOut();
+    $('.prepaidBox').fadeIn();
   }else if($(this).val()== 'dth'){
     $('.sec1').html('DTH');
     $('.commonHBox').fadeOut();
@@ -92,7 +94,7 @@ $(document).on('click','.btnTab',function(){
     
     test = function(){
         var btnTabActive = $('.btnTab.active').val();
-    if(btnTabActive == 'mobile'){
+    if(btnTabActive == 'mobile' || btnTabActive == 'dc'){
         var mobile  = commonIncomeBox('prepaidBox');
         callDynTab(mobile);
     } else if(btnTabActive == 'dth'){
