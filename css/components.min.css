@@ -842,7 +842,7 @@ body {
 }
 
     .has-success .md-radio label > .box, .has-success.md-radio label > .box {
-        border-color: #27a4b0;
+        border-color: #0E968C;
     }
 
     .has-success .md-radio label > .check, .has-success.md-radio label > .check {
@@ -889,7 +889,7 @@ body {
 }
 
 .form-md-radios.has-success label {
-    color: #36c6d3;
+    color: #0E968C;
 }
 
 .form-md-radios.has-warning label {
@@ -2408,8 +2408,8 @@ li [class*=" icon-"], li [class^=icon-] {
 
     .btn.green:not(.btn-outline) {
         color: #FFF;
-        background-color: #32c5d2;
-        border-color: #32c5d2;
+        background-color: #0E968C;
+        border-color: #0E968C;
     }
 
         .btn.green:not(.btn-outline).focus, .btn.green:not(.btn-outline):focus {
@@ -2445,15 +2445,15 @@ li [class*=" icon-"], li [class^=icon-] {
         }
 
     .btn.btn-outline.green {
-        border-color: #32c5d2;
-        color: #32c5d2;
+        border-color: #0E968C;
+        color: #0E968C;
         background: 0 0;
     }
 
         .btn.btn-outline.green.active, .btn.btn-outline.green:active, .btn.btn-outline.green:active:focus, .btn.btn-outline.green:active:hover, .btn.btn-outline.green:focus, .btn.btn-outline.green:hover {
-            border-color: #32c5d2;
+            border-color: #0E968C;
             color: #FFF;
-            background-color: #32c5d2;
+            background-color: #0E968C;
             box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2) !important;
         }
 

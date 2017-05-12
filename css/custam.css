@@ -2,7 +2,7 @@
 /* CSS Document */
 
 .main-header {
-	background-color:#25b7c0;
+	background-color:#0E968C;
 	min-height:80px;
 }
 ul.main-menu {
@@ -63,7 +63,7 @@ ul.main-menu li.topbar-devider {
 }
 .header {
     width:100%;
-    background-color:#25b7c0;
+    background-color:#0E968C;
     height:45px;
     text-align:center;
     padding-top:4px;
